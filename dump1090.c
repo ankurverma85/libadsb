@@ -524,6 +524,10 @@ int startlistener(char const* const dev_name)
         return 1;
     }
 }
+void stoplistener()
+{
+    Modes.exit = 1;
+}
 //
 //=========================================================================
 //
@@ -546,7 +550,6 @@ char* generateAircraftJson(const char* url_path, int* len)
 char* generateHistoryJson(const char* url_path, int* len)
 {
 }
-
 
 void modesInitNet()
 {

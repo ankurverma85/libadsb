@@ -29,6 +29,11 @@ void ADSB::IListener::Start()
     startlistener(_deviceName.c_str());
 }
 
+void ADSB::IListener::Stop()
+{
+    stoplistener();
+}
+
 extern "C" void modesQueueOutput(struct modesMessage* mm, struct aircraft* a)
 {
     singletonListener->OnMessage(ModeMessageImpl(mm), AirCraftImpl(a));

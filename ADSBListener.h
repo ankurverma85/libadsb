@@ -30,7 +30,6 @@ struct IListener
     void         Stop();
 
     private:
-    std::thread _thread;
     std::string _deviceName;
     //  Callback    _callback;
 };
